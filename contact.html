@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="NSABIMANA Shabani"/>
+    <meta name="description" content=" Site OFFICIEL.NSABIMANA Shabani"/>
+    <meta name="google-verification" content="4f37e59480099a93"/>
+    <meta name="theme-color" content="#166A99">
+        <meta name="revised" content="Shabani , 04/10/2020 and 27/10/2020″/>
+    <meta name="author" content="NSABIMANA Shabani">
+    
+
+
+    <title>Contact</title>
+
+<style>
+/*html {overflow-y: scroll;}	*/
+body {
+  margin: 30px 30px 40px 50px;
+  border: 2px solid yellow;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-image: url(mimi.jpg);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+#topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.fiche {  float: left;  width: 70%;}
+.profile{  float: left;  width: 20%;  padding-left: 20px;border:10px solid black;}
+.content:after {  content: "";  display: table;  clear: both;}
+
+.content {
+  padding: 16px;
+  width: 75%;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-right: 
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+/* Pied de page */
+.foot{float:left;width:30%;padding: 15px;color: white;}
+	.row:after {content: "";display: table;clear: both;}
+
+.footer {
+
+  /*position: fixed;*/
+  padding: 20px;
+  text-align: center;
+  background: rgb(155,155,155);
+  color:white;
+  bottom: 0;
+  width:100%;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+ 
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  #topnav a {
+    display: block;
+  }
+}
+</style>
+</head>
+<body onload="currentTime()">
+
+<div class="header">
+  <div class="header">
+  <h1>Site Officiel de Mr. NSABIMANA Shabani</h1>
+  <p>Bienvenue</p>
+</div>
+</div>
+
+<div id="topnav">
+  <a class="active" href="me.html">Accueil</a>
+  <a href="javascript:void(0)">Actualités</a>
+  <a href="javascript:void(0)">Services</a>
+  <a href="shopping.html">Magasin</a><!--This will change to shopping.php-->
+  <a href="contact.html">Call</a>
+  <a id="clock" href="javascript:void(0)" style="float:right"></a>
+</div>
+
+
+<div class="footer">
+    <div class="row">
+			<div class="foot">
+				<address>Ku MUNZENZE</address>
+			</div>
+			<div class="foot">
+				<p>Copyright</p>
+				<p id="footer"></p>
+ 
+			</div>
+			<div class="foot">
+				 <a href="index.html">Termes et Politiques de confidencialité</a>
+			</div>
+		</div>
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("topnav");
+var sticky = topnav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    topnav.classList.add("sticky")
+  } else {
+    topnav.classList.remove("sticky");
+  }
+}
+</script>
+<!--------------------Display clock------------------------->
+<script type="text/javascript">
+	function currentTime(){
+		var d= new Date();
+		var h=d.getHours();
+		var min=d.getMinutes();
+		var s=d.getSeconds();
+		
+		var y=d.getFullYear();
+		var mm=d.getMonth()+1;
+		var dd=d.getDate();
+		var jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
+		var j=jours[-1+d.getDay()];
+		h=checkTime(h);
+		dd=checkTime(dd);
+        s=checkTime(s);
+        if (mm+10<12){mm="0" + mm;}
+		
+		document.getElementById("clock").innerHTML= j + " " + dd +"/" +  mm + "/" + y  + " " +  h + ":" + min + ":" + s;
+		var t=setTimeout(currentTime,500)
+		document.getElementById("footer").innerHTML = d.getFullYear();
+		}
+
+	function checkTime(i){
+		if (i<10){i="0" + i}
+		return i;	
+	}	
+</script>
+
+<!------------------------End of Script--------------------->
+
+
+</body>
+</html>
+
