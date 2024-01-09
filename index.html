@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-  <title>NSABIMANA SHABANI</title>
+<html lang="en">
+<head>
+<title>NSABIMANA Shabani</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+  * Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
 </head>
 <body>
 
-<h1>mon premier site </h1>
-<p>En cours de construction</p>
+<div class="header">
+  <h1>BIENVENU</h1>
+</div>
+
+<div class="topnav">
+  <a href="#">ACCUEIL</a>
+  <a href="#">SHOP</a>
+  <a href="#">CONTACT</a>
+</div>
 
 </body>
+  <div class="footer">
+  <p id="ft"></p>
+<script>
+const d = new Date();
+  let zone="MUNZENZE";
+document.getElementById("ft").innerHTML =zone+d.getFullYear();
+  
+</script>
+
+</div>
 </html>
+
+
